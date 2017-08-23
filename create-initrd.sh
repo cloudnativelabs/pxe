@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e
 
 find usr | cpio -o -H newc -O oem-packet.cpio
 gzip oem-packet.cpio

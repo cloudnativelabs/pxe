@@ -2,7 +2,7 @@
 
 set release beta
 set coreos-url http://${release}.release.core-os.net/amd64-usr/current
-set custom-url https://gitlab.com/cloudnativelabs/pxe/uploads/7c7e277ecadb38553cd09751639ab319
+set custom-url https://cdn.rawgit.com/cloudnativelabs/pxe/releases/download/v0.1.0-oem_packet.0/oem-packet.cpio.gz
 set console console=ttyS1,115200n8
 set coreos-initrd coreos_production_pxe_image.cpio.gz
 set custom-initrd oem-packet.cpio.gz

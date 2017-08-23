@@ -2,7 +2,7 @@
 
 set release alpha
 set coreos-url http://${release}.release.core-os.net/amd64-usr/current
-set custom-url https://cdn.rawgit.com/cloudnativelabs/pxe/releases/download/v0.1.0-oem_packet.0/oem-packet.cpio.gz
+set custom-url https://github.com/cloudnativelabs/pxe/releases/download/v0.1.0-oem_packet.0
 set console console=ttyS1,115200n8
 set coreos-initrd coreos_production_pxe_image.cpio.gz
 set custom-initrd oem-packet.cpio.gz

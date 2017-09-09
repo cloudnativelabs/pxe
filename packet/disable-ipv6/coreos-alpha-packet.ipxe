@@ -1,0 +1,17 @@
+#!ipxe
+
+set release alpha
+set coreos-url http://${release}.release.core-os.net/amd64-usr/current
+set custom-url https://github.com/cloudnativelabs/pxe/releases/download/v0.1.0-oem_packet.0
+set console console=ttyS1,115200n8
+set coreos-initrd coreos_production_pxe_image.cpio.gz
+set custom-initrd oem-packet.cpio.gz
+set first-boot coreos.first_boot=1
+set auto-login coreos.autologin
+set oem coreos.oem.id=packet
+
+kernel ${coreos-url}/coreos_production_pxe.vmlinuz ${console} ${first-boot} ${auto-login} ${oem} ipv6.disable=1
+initrd ${coreos-url}/${coreos-initrd}
+initrd ${custom-url}/${custom-initrd}
+
+boot
